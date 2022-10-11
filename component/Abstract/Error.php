@@ -5,10 +5,10 @@ namespace Phant\Error\Abstract;
 
 abstract class Error extends \Exception
 {
-	function __construct(?string $detail = null)
+	function __construct(?string $message = null)
 	{
-		if ($detail) {
-			$this->message .= ' (' . $detail . ')';
+		if ($message) {
+			$this->message = $message;
 		}
 	}
 }
